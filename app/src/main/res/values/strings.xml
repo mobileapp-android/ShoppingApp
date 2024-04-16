@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">QuickCart</string>
+    <string name="app_name">ShoppingApp</string>
 
-    <string name="app_desc">This application is a coding challenge for onboarding a new Android Developer to the project.</string>
+    <string name="app_desc">Shopping App developed as part of the coding challenge exercise by applying most of the latest android features</string>
 
 
     <string name="ok">OK</string>
@@ -13,15 +13,15 @@
     <string name="product_id_invalid_error">Invalid product ID</string>
     <string name="product_id_null_error">Product ID can\'t be null</string>
     <string name="database_error">Database Error</string>
-    <string name="no_record_found">The cart is empty.</string>
-    <string name="product_list_load_error">There was an error encountered while loading products. Please verify your connection.</string>
-    <string name="product_details_load_error">There was an error encountered. Please verify your connection.</string>
+    <string name="no_record_found">Shopping cart is empty</string>
+    <string name="error_get_products">Something went wrong. Please check your device network settings and try again</string>
+    <string name="error_product_details">Something went wrong. Please check your device network settings and try again</string>
 
     <!--Short messages-->
-    <string name="add_to_cart_success">The item has been added to the cart successfully.</string>
+    <string name="add_to_cart_success">Added to cart !!</string>
 
     <!--Content Descriptions-->
-    <string name="app_logo">Smart Home App Logo</string>
+    <string name="app_logo">Shopping App Logo</string>
     <string name="add_button">Add Button</string>
     <string name="close_button">Close Button</string>
     <string name="delete_button">Delete Button</string>

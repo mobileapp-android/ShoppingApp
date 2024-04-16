@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.retail.shoppingapp.navigation.Screen
-import com.retail.shoppingapp.ui.theme.EasyCartTheme
+import com.retail.shoppingapp.ui.theme.ShoppingAppTheme
 import kotlinx.coroutines.delay
 
 @Composable
@@ -42,7 +42,7 @@ private fun SplashScreenContent() {
 @Preview(showBackground = true)
 @Composable
 private fun SplashScreenPreview() {
-    EasyCartTheme {
+    ShoppingAppTheme {
         SplashScreen()
     }
 }

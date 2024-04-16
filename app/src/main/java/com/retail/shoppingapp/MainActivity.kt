@@ -11,7 +11,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.retail.shoppingapp.navigation.ScreenNavigation
-import com.retail.shoppingapp.ui.theme.EasyCartTheme
+import com.retail.shoppingapp.ui.theme.ShoppingAppTheme
 import com.retail.shoppingapp.widgets.MySnackBar
 import com.retail.shoppingapp.state.rememberAppState
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val appState = rememberAppState()
-            EasyCartTheme {
+            ShoppingAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
