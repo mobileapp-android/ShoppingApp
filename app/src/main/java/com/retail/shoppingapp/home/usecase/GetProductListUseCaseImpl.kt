@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @ActivityRetainedScoped
 class GetProductListUseCaseImpl@Inject constructor(
-    private val getProducts: GetProductsRepo
+    private val getProductsRepo : GetProductsRepo
 ) : GetProductListUseCase {
-    override suspend fun invoke(): Flow<PagingData<Product>> = getProducts.invoke()
+    override suspend fun invoke(): Flow<PagingData<Product>> = getProductsRepo.invoke()
 }

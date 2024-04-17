@@ -20,7 +20,7 @@ import com.retail.shoppingapp.R
 import com.retail.shoppingapp.ui.theme.Black
 import com.retail.shoppingapp.ui.theme.DarkBrownShade
 import com.retail.shoppingapp.ui.theme.LightGray
-import com.retail.shoppingapp.ui.theme.Purple40
+import com.retail.shoppingapp.ui.theme.TopBarColour
 import com.retail.shoppingapp.ui.theme.White
 import com.retail.shoppingapp.utils.Constants.EMPTY
 import com.retail.shoppingapp.utils.onClick
@@ -37,7 +37,7 @@ fun DrawTopAppBar(
 ) {
     Column {
         CenterAlignedTopAppBar(
-            colors = TopAppBarDefaults.centerAlignedTopAppBarColors(if (isSystemInDarkTheme()) Black else Purple40),
+            colors = TopAppBarDefaults.centerAlignedTopAppBarColors(if (isSystemInDarkTheme()) Black else TopBarColour),
             title = {
                 Text(
                     text = title,

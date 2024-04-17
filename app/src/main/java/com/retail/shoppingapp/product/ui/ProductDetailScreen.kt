@@ -125,6 +125,7 @@ private fun ProductDetailsContent(
             .verticalScroll(rememberScrollState())
     ) {
         ProductImagePager(productDetailsState.value.images)
+        DrawProductInfoCard(product = productDetailsState.value)
         AddToCartButton(modifier = Modifier.fillMaxWidth()) {
             addToCartOnClick.invoke(productDetailsState.value)
         }

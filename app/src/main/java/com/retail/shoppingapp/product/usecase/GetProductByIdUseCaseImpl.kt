@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @ActivityRetainedScoped
 class GetProductByIdUseCaseImpl @Inject constructor(
-    private val repository: ProductRepository
+    private val productRepository: ProductRepository
 ) : GetProductByIdUseCase {
-    override fun invoke(productId: Int): Flow<Resource<Product>> = repository.invoke(productId)
+    override fun invoke(productId: Int): Flow<Resource<Product>> = productRepository.invoke(productId)
 }

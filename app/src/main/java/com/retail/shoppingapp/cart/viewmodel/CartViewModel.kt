@@ -32,7 +32,7 @@ class CartViewModel @Inject constructor(
         getCart()
     }
 
-    private fun getCart() = viewModelScope.launch(Dispatchers.IO) {
+     fun getCart() = viewModelScope.launch(Dispatchers.IO) {
         getCartUsecase.invoke().collect {
             when (it) {
                 is Resource.Success -> {
