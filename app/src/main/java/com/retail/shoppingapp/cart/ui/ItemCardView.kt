@@ -18,10 +18,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import com.retail.shoppingapp.R
 import com.retail.shoppingapp.storage.tables.Product
 import com.retail.shoppingapp.ui.theme.GrayShade1
@@ -39,13 +41,15 @@ fun ItemCardView(product: Product, itemClick: (Product) -> Unit) {
     ) {
         Row(
             modifier = Modifier
-                .background(if (isSystemInDarkTheme()) GrayShade1 else White)
+                .padding(5.dp)
+                .background(if (isSystemInDarkTheme()) GrayShade1 else White
+                    )
                 .fillMaxWidth(), verticalAlignment = Alignment.CenterVertically
         ) {
             CoilImageLoader(
                 imageUrl = product.thumbnail,
                 contentDesc = product.title,
-                modifier = Modifier.size(dimensionResource(id = R.dimen.box_size_medium)),
+                modifier = Modifier.size(dimensionResource(id = R.dimen.box_size_small)),
                 placeholder = R.drawable.baseline_broken_image_24,
                 contentScale = ContentScale.FillBounds
             )
@@ -78,7 +82,7 @@ fun ItemCardView(product: Product, itemClick: (Product) -> Unit) {
                 Icon(
                     imageVector = Icons.Default.Delete,
                     contentDescription = stringResource(id = R.string.delete_button),
-                    tint = Red
+                    tint = Color.Black
                 )
             }
         }

@@ -142,13 +142,13 @@ fun AddToCartButton(modifier: Modifier, onClick: onClick) {
             .height(dimensionResource(id = R.dimen.filled_button_height)),
         onClick = { onClick.invoke() },
         colors = ButtonDefaults.outlinedButtonColors(
-            containerColor = colorResource(id = R.color.teal_200)
+            containerColor = colorResource(id = R.color.purple_700)
         ),
-        elevation = ButtonDefaults.buttonElevation(dimensionResource(id = R.dimen.elevation_medium))
+        elevation = ButtonDefaults.buttonElevation(dimensionResource(id = R.dimen.elevation_small))
     ) {
         Text(
             text = stringResource(id = R.string.add_to_cart),
-            style = MaterialTheme.typography.bodySmall.copy(color = Color.White),
+            style = MaterialTheme.typography.bodyMedium.copy(color = Color.White),
             textAlign = TextAlign.Center
         )
     }

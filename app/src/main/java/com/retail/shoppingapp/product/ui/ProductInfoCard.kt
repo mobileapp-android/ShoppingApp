@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.retail.shoppingapp.R
 import com.retail.shoppingapp.storage.tables.Product
+import com.retail.shoppingapp.ui.theme.Gray
 import com.retail.shoppingapp.ui.theme.GrayShade1
 import com.retail.shoppingapp.ui.theme.White
 import com.retail.shoppingapp.widgets.RatingBar
@@ -30,9 +31,9 @@ fun DrawProductInfoCard(product: Product) {
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(dimensionResource(id = R.dimen.padding_medium)),
-        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_medium)),
-        shadowElevation = dimensionResource(id = R.dimen.elevation_medium)
+            .padding(dimensionResource(id = R.dimen.padding_medium))
+//        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_small)),
+//        shadowElevation = dimensionResource(id = R.dimen.elevation_small)
     ) {
         Column(
             modifier = Modifier
@@ -44,17 +45,27 @@ fun DrawProductInfoCard(product: Product) {
                 Text(
                     text = product.brand,
                     fontWeight = FontWeight.Bold,
-                    style = MaterialTheme.typography.bodyLarge
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.padding(start =
+                        dimensionResource(id = R.dimen.padding_small)
+                    ),
                 )
                 Spacer(modifier = Modifier.weight(2f))
             }
-            Text(text = product.category, style = MaterialTheme.typography.bodyMedium)
+            Text(text = product.category, style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(start =
+                    dimensionResource(id = R.dimen.padding_small), top = dimensionResource(id = R.dimen.padding_small)
+                ),)
 
             Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
-                Text(text = "$${product.price}", style = MaterialTheme.typography.headlineLarge)
+                Text(text = "$${product.price}",
+                    style = MaterialTheme.typography.headlineLarge,
+                    modifier = Modifier.padding(start =
+                    dimensionResource(id = R.dimen.padding_small)
+                    ),)
                 Text(
                     text = "(${product.discountPercentage}% Off)",
-                    modifier = Modifier.padding(
+                    modifier = Modifier.padding(start =
                         dimensionResource(id = R.dimen.padding_small)
                     ),
                     style = MaterialTheme.typography.bodySmall
@@ -63,15 +74,15 @@ fun DrawProductInfoCard(product: Product) {
             Text(
                 text = "Stock: ${product.stock}",
                 style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(
-                    dimensionResource(id = R.dimen.padding_small)
+                modifier = Modifier.padding(start =
+                    dimensionResource(id = R.dimen.padding_small), top = dimensionResource(id = R.dimen.padding_small)
                 ),
             )
             Text(
                 text = product.description,
                 style = MaterialTheme.typography.bodySmall,
-                modifier = Modifier.padding(
-                    dimensionResource(id = R.dimen.padding_small)
+                modifier = Modifier.padding(start =
+                    dimensionResource(id = R.dimen.padding_small), top = dimensionResource(id = R.dimen.padding_small)
                 ),
             )
 
