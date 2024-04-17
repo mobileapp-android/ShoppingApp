@@ -61,7 +61,8 @@ fun HomeScreen(
         },
         snackbarHost = { MySnackBar(snackBarHostState = snackBarState) },
     ) {
-        Column(modifier = Modifier.padding(it)) {
+        Column(modifier = Modifier.padding(it),
+            ) {
             DrawHomeContent(navController, viewModel)
         }
     }
@@ -143,7 +144,7 @@ private fun DrawHomeTopAppBar(
 ) {
     DrawTopAppBar(
         scrollBehavior = scrollBehavior,
-        navigationIcon = Icons.Default.Info,
+        navigationIcon = null,
         title = stringResource(id = R.string.app_name),
         actionIcon = Icons.Default.ShoppingCart,
         actionOnClick = { navController.navigate(Screen.CartScreen.route) },
