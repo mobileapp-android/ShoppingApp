@@ -50,22 +50,4 @@ class ProductViewModelTest {
         Dispatchers.resetMain()
         testScope.cleanupTestCoroutines()
     }
-
-//    @Test
-//    fun `test get product by Id`() = runTest {
-//        val product = Product(brand = "Samsung")
-//        coEvery { productsRepository.invoke(1) } returns flowOf(
-//            Resource.Success(product, "Success")
-//        )
-//        productViewModel.getProductByID(1)
-//        assertThat(productViewModel.productDetailsState.value).isEqualTo(ApiState.Success)
-//        assertThat(productViewModel.productDetailsState.value.brand).isEqualTo(Product(brand = "Samsung"))
-//    }
-//
-//    @Test
-//    fun `test Add To Cart`() = runTest {
-//        coEvery { cartRepository.invoke(Product(brand = "Samsung")) } returns flowOf(Resource.Success(1, "Success"))
-//        productViewModel.addToCart(Product(brand = "Samsung"), onSuccess = {})
-//        assertThat(productViewModel.productDetailsState.value.value.id).isEqualTo(1)
-//    }
 }
