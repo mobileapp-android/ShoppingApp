@@ -23,7 +23,7 @@ fun ItemCardView(
     product: Product,
     onClick: onItemClick
 ) {
-    Surface(shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_large))) {
+    Surface(shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_small))) {
         Column(modifier = Modifier
             .fillMaxWidth()
             .clickable { product.productId?.let { onClick.invoke(it) } }) {
@@ -35,6 +35,8 @@ fun ItemCardView(
                 contentScale = ContentScale.FillBounds
             )
             Text(text = product.title)
+            Text(text = product.brand)
+            Text(text = "Price : "+product.price.toString())
         }
     }
 }

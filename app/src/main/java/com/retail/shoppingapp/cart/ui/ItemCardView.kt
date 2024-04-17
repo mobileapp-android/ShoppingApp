@@ -35,7 +35,7 @@ import com.retail.shoppingapp.widgets.RatingBar
 fun ItemCardView(product: Product, itemClick: (Product) -> Unit) {
     Surface(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_large)),
+        shape = RoundedCornerShape(dimensionResource(id = R.dimen.corner_radius_small)),
     ) {
         Row(
             modifier = Modifier
@@ -57,6 +57,11 @@ fun ItemCardView(product: Product, itemClick: (Product) -> Unit) {
                 Text(
                     text = product.title,
                     fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Text(
+                    text = product.brand,
+                    fontWeight = FontWeight.Light,
                     style = MaterialTheme.typography.bodySmall
                 )
                 Row(verticalAlignment = Alignment.Bottom) {
@@ -67,10 +72,6 @@ fun ItemCardView(product: Product, itemClick: (Product) -> Unit) {
                         ), style = MaterialTheme.typography.bodySmall
                     )
                 }
-                RatingBar(
-                    rating = product.rating,
-                    starSize = dimensionResource(id = R.dimen.rating_bar_size_medium)
-                )
             }
             IconButton(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium)),
                 onClick = { itemClick.invoke(product) }) {
